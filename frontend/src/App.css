@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --brand-ink: #141a1a;
+  --brand-deep: #0e1514;
+  --brand-reef: #1f7a6f;
+  --brand-forest: #0f3e36;
+  --brand-sage: #cfe6da;
+  --brand-coral: #f26a4b;
+  --brand-amber: #f5a24a;
+  --brand-sand: #f6efe6;
+  --brand-cream: #fffaf4;
+  --brand-mist: #e7f1ed;
+  --brand-gold: #f5c56b;
+  --brand-shadow: rgba(15, 24, 23, 0.12);
+  --hero-bg: radial-gradient(900px 540px at 8% 12%, rgba(245, 162, 74, 0.18), transparent 60%),
+    radial-gradient(800px 500px at 88% 10%, rgba(31, 122, 111, 0.2), transparent 55%),
+    linear-gradient(135deg, #0e1514 0%, #17312d 48%, #0b1413 100%);
+}
+
+body {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--brand-ink);
+  background-color: var(--brand-cream);
+  background-image:
+    radial-gradient(920px 600px at 10% 8%, rgba(245, 162, 74, 0.08), transparent 60%),
+    radial-gradient(760px 520px at 90% 12%, rgba(31, 122, 111, 0.12), transparent 55%),
+    linear-gradient(180deg, rgba(255, 250, 244, 0.98) 0%, rgba(246, 239, 230, 0.92) 100%);
+  scroll-behavior: smooth;
+}
+input,select{
+  outline: none;
+}
+.batch_heart{
+  background: var(--brand-coral);
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  position: absolute;
+  right: -24%;
+  top: -9%;
+  cursor: pointer;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background-image:
+    radial-gradient(900px 520px at 6% 10%, rgba(245, 162, 74, 0.1), transparent 60%),
+    radial-gradient(760px 500px at 92% 0%, rgba(31, 122, 111, 0.16), transparent 55%);
+}
+
+.app-section {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+.section-kicker {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--brand-reef);
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: "Unbounded", "Times New Roman", serif;
+  font-weight: 600;
+  color: var(--brand-ink);
+}
+
+.section-subtitle {
+  color: rgba(16, 32, 40, 0.72);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand-reef), var(--brand-forest));
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-weight: 600;
+  box-shadow: 0 16px 35px rgba(15, 24, 23, 0.18);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(16, 26, 26, 0.16);
+  background: rgba(255, 250, 244, 0.9);
+  color: var(--brand-ink);
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-weight: 600;
+}
+
+.glass-panel {
+  background: rgba(255, 250, 244, 0.72);
+  border: 1px solid rgba(16, 26, 26, 0.08);
+  box-shadow: 0 20px 50px rgba(15, 24, 23, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.soft-ring {
+  box-shadow: 0 0 0 1px rgba(16, 32, 40, 0.08) inset;
+}
+
+.hero-orbit {
+  position: absolute;
+  border-radius: 999px;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  animation: orbitSpin 16s linear infinite;
+}
+
+@keyframes orbitSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
